@@ -25,19 +25,8 @@ console.log('accounts', accounts)
                 <h1 style={{marginTop: '5%', display: 'flex', justifyContent: 'center', fontFamily: 'Architects Daughter, cursive', fontSize: '4rem'}}>User's Piggy Bank Info</h1>
                 <img style={{width:'70px', height: '70px', borderRadius: '50%', border: 'solid .5px black', alignSelf: 'center'}} src={Pig_Logo} alt="Logo" />
             </div>   
-
-         
-
+            
             <div className="card" style={{width: '35rem', margin: '3% auto', border: 'solid 2px green', backgroundColor: 'green'}}>
-                {/* <div class="card-header">
-                    Featured
-                </div> */}
-                    {/* <ul className="list-group list-group-flush">
-                        <li className="list-group-item"><u>Username</u>: MichaelRoss</li>
-                        <li className="list-group-item"><u>Email</u>: MisterMichael@gmail.com</li>
-                        <li className="list-group-item"><u>Password</u>: Piano23!</li>
-                    </ul> */}
-
                 {/* map over accounts and return a jsx expression */}
                 {accounts.map((account) => {
                     return (    
@@ -49,7 +38,6 @@ console.log('accounts', accounts)
                 )
             }
         )}
-
             </div>
         
         </div>     

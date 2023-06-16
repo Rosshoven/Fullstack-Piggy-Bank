@@ -11,6 +11,7 @@ import Deposit from './routes/deposit';
 import Home from './routes/home';
 import Root from './routes/root';
 import Withdraw from './routes/withdraw';
+import Login from './routes/login';
 
 // imporiting Contexts for router
 import { AccountProvider } from './routes/account-context';
@@ -50,7 +51,9 @@ const router = createBrowserRouter([
       {
         path: 'all-data',
         element: <AllData />
-      }
+      }, 
+      { path: 'login',
+        element: <Login />}
     ]
   },
 ]);

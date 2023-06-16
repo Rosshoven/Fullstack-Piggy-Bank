@@ -2,8 +2,8 @@ import home_piggy from '../images/home_piggy.jpg';
 
 export default function Home() {
     return (
-        < div style={{backgroundColor: 'lightblue', borderSizing: 'border-box', position: 'static', padding: '3% 0% 30% 0%'}}>
-            <div className="card" style={{marginRight: 'auto', marginLeft: 'auto', marginTop: '6.5%', border: 'solid 4px green', width: '42%', fontFamily: 'Forum, cursive', fontSize: '1.4rem'}}>
+        < div style={{backgroundColor: 'lightblue', borderSizing: 'border-box', position: 'static', padding: '5% 0% 30% 0%'}}>
+            <div className="card" style={{marginRight: 'auto', marginLeft: 'auto', marginTop: '7.5%', border: 'solid 4px green', width: '40%', fontFamily: 'Forum, cursive', fontSize: '1.4rem'}}>
             
                 <h6 style={{padding: '2% 2%', backgroundColor: 'pink', marginBottom: '-1%', fontFamily: 'Forum, cursive'}}><u>Welcome to...</u></h6>
                 <h1 style={{ backgroundColor: 'pink', width: '100%', display: 'flex', justifyContent: 'center', margin: '0% auto', padding: '.5%', fontFamily: 'Architects Daughter, cursive', fontSize: '5rem', color: 'lightblue', textShadow: '1.5px 3px 2px black'}}>PIGGY BANK</h1>

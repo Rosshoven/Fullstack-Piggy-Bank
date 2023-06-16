@@ -8,12 +8,12 @@ const port = 3000;
 
 
 
-app.use(express.static('client/public/index.html/'));
+app.use(express.static('client'));
 
 
 // Home
 app.get('/', (req, res) => {
-    res.send('HOME! Where my feet feel fucked up, HOME!');
+    res.send('HOME! Where my fridge has pickles, HOME!');
 });
 
 // Create Account

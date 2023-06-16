@@ -5,7 +5,7 @@ import Pig_Logo from '../images/Pig_Logo.png';
 // import the code for balance context
 // import { BalanceContext } from "./balance-context";
 import  { useState } from "react";
-// import { AccountContext } from "./account-context";
+import { useAccountContext } from "./account-context";
 // import { Popover } from "bootstrap";
 
 // import Balance provider //commented out because I put provider into index.js
@@ -18,10 +18,12 @@ export default function Root() {
   // The useStates were created simply to have a pop-up (pop-down) show up with onMouseEnter & go away with onMouseLeave for each link
   const [homeShown, setHomeShown] = useState(false);
   const [cAShown, setCAShown] = useState(false);
+  const [lgnShown, setLgnShown] = useState(false);
   const [depShown, setDepShown] = useState(false);
   const [withdrawShown, setWithdrawShown] = useState(false);
   const [allDataShown, setAllDataShown] = useState(false);
   
+  const { accounts } = useAccountContext();
 
     return (
       <>
@@ -64,6 +66,13 @@ export default function Root() {
                     }}>Create Account</NavLink>
                     {cAShown && (<div style={{borderRadius: '5px', fontSize: '1rem', color: 'black', backgroundColor: 'antiquewhite', marginTop: '3%', display: 'flex', justifyContent: 'center', padding: '2%'}}>Create your Piggy Bank!</div>)}
                   </li>
+
+                  <li className="nav-link" onMouseEnter={() => setLgnShown(true)} onMouseLeave={() => setLgnShown(false)}>
+                  <NavLink to={'login'}  className={({isActive}) => {
+                    return `nav-link active${isActive ? ' bg-success hover:bg-gray-700 hover:text-white' : 'bg-gray-900 text-white'}`
+                    }}>Login</NavLink>
+                    {lgnShown && (<div style={{borderRadius: '5px', fontSize: '1rem', color: 'black', backgroundColor: 'antiquewhite', marginTop: '3%', display: 'flex', justifyContent: 'center', padding: '2%'}}>Pig in!</div>)}
+                  </li>
                   
                   <li className="nav-link" onMouseEnter={() => setDepShown(true)} onMouseLeave={() => setDepShown(false)}>
                   <NavLink to={'deposit'}  className={({isActive}) => {
@@ -86,8 +95,16 @@ export default function Root() {
                     {allDataShown && (<div style={{borderRadius: '5px', fontSize: '1rem', color: 'black', backgroundColor: 'antiquewhite', marginTop: '3%', display: 'flex', justifyContent: 'center', padding: '2%'}}>User's Piggy Bank info.</div>)}
                   </li>
                 </ul> 
+
               </div>
-            
+                    
+              <div style={{alignSelf: 'start', fontFamily: 'Architects Daughter, cursive', color: 'black', textShadow: '1px 1px lightblue'}}>
+                {accounts.map((account) => { 
+                    return <h5>{account.userName}</h5>
+                  })}
+                </div>
+              
+
             </div>
           </nav>
         </div>
