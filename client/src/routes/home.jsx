@@ -11,9 +11,9 @@ export default function Home() {
                 
                 <div className="card-body" style={{ backgroundColor: 'pink' }}>
                     <h5 className="card-title" style={{fontSize: '1.4rem', fontFamily: 'Forum, cursive'}}>Here at Piggy Bank you can feel safe and secure knowing that your money is protected by a pig. Only you can feed the piggy, and only you can break the piggy.</h5>
-                    <p className="card-text" style={{fontFamily: 'Forum, cursive', fontSize:'1.4rem', color: 'white'}}>
+                    {/* <p className="card-text" style={{fontFamily: 'Forum, cursive', fontSize:'1.4rem', color: 'white'}}>
                         <a href="create-account" type="button" className="btn btn btn-outline-success" style={{color: 'white', fontFamily: 'Forum, cursive', fontSize:'1.4rem' }}>
-                            Create Account</a> to get started!</p>
+                            Create Account</a> to get started!</p> */}
                 </div>
 
             </div>

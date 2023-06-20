@@ -11,6 +11,7 @@ import { useAccountContext } from "./account-context";
 // import Balance provider //commented out because I put provider into index.js
 // import { BalanceProvider } from "./balance-context";
 
+
 export default function Root() {
   // balance state is created and used in Balance Context
   // const [balance, setBalance] = useState(0);
@@ -22,16 +23,13 @@ export default function Root() {
   const [depShown, setDepShown] = useState(false);
   const [withdrawShown, setWithdrawShown] = useState(false);
   const [allDataShown, setAllDataShown] = useState(false);
+
   
-  const { accounts } = useAccountContext();
+  const { accounts, loggedIn } = useAccountContext();
 
     return (
-      <>
-      {/* Provide the balance throughout all components in the navbar. Must give a value, using useState to update the balance itself */}
-      {/* <BalanceContext.Provider value={{balance, setBalance}}> */}
-
-      {/* Refactored to understand useContext better. BalanceProvider is defined in the balance-context.jsx */}
-      {/* <BalanceProvider> */}
+      <>   
+      {!loggedIn  ? (
         <div>
           <nav style={{borderBottom: 'solid 1.5px green', position: 'fixed', width: '100%', backgroundColor: '#ffc4cd', fontFamily: 'Forum, cursive', fontSize: '1.5rem'}} className="nav nav-pills nav-justified navbar navbar-expand-lg navbar-dark sticky-top">
             <div className="container-fluid">
@@ -73,6 +71,34 @@ export default function Root() {
                     }}>Login</NavLink>
                     {lgnShown && (<div style={{borderRadius: '5px', fontSize: '1rem', color: 'black', backgroundColor: 'antiquewhite', marginTop: '3%', display: 'flex', justifyContent: 'center', padding: '2%'}}>Pig in!</div>)}
                   </li>
+                </ul>
+              </div>    
+            </div>
+           </nav>
+        </div>       
+        
+      ) : ( 
+
+        
+          <div>
+          <nav style={{borderBottom: 'solid 1.5px green', position: 'fixed', width: '100%', backgroundColor: '#ffc4cd', fontFamily: 'Forum, cursive', fontSize: '1.5rem'}} className="nav nav-pills nav-justified navbar navbar-expand-lg navbar-dark sticky-top">
+            <div className="container-fluid">
+
+              {/* Creating a react-router-dom link for the Logo, goes to home page b/c to={'home'} */}
+              <Link className="navbar-brand " to={'home'} style={{fontFamily: 'Architects Daughter, cursive', fontSize: '2rem', color: 'lightblue', textShadow: '1.5px 1.5px black', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <h1 style={{marginLeft: '1.2%'}}>PIGGY BANK</h1>
+                <img style={{width:'70px', height: '70px', borderRadius: '50%', border: 'solid .5px black'}} src={Pig_Logo} alt="Logo" />
+              </Link>
+
+              {/* Bootstrap functionality for Navbar toggle button working, responsive tool for smaller screen size */}
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+
+              <div className="collapse navbar-collapse" id="navbarScroll" style={{ marginLeft: '1%'}}>
+                <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" 
+                style={{bsScrollHeight: "100px"}}
+                >
                   
                   <li className="nav-link" onMouseEnter={() => setDepShown(true)} onMouseLeave={() => setDepShown(false)}>
                   <NavLink to={'deposit'}  className={({isActive}) => {
@@ -100,19 +126,22 @@ export default function Root() {
                     
               <div style={{alignSelf: 'start', fontFamily: 'Architects Daughter, cursive', color: 'black', textShadow: '1px 1px lightblue'}}>
                 {accounts.map((account) => { 
-                    return <h5>{account.userName}</h5>
+                    return (
+                    <div>
+                    <h5>{account.email}</h5>
+                    <a className="btn btn-outline-success" href="/">Log Out</a>
+                    </div>
+                    )
                   })}
                 </div>
-              
-
             </div>
           </nav>
-        </div>
+        </div> )}
+        
         
         <div id="detail">
           <Outlet />
         </div>
-      {/* </BalanceProvider> */}
       </>
     );
   }

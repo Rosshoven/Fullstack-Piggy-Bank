@@ -6,10 +6,11 @@ import { useState } from "react";
 import { loginSchema } from "../schemas/login-schema";
 // importing the Account Context
 import { useAccountContext } from "./account-context";
+import { Link } from "react-router-dom";
 
 function BasicForm() {
     // defining the handleSetAccountData by destructring. Will be imperitive to use to update the accounts, coming from the Account Context so it will be saved.
-    const { handleSetAccountData } = useAccountContext();
+    const { handleSetAccountData, accounts, setLoggedIn } = useAccountContext();
 
     // useState hook used to display text on the button: Create Another Account' OR 'Create Account'  
     // const [createAccountTrue, setCreateAccountTrue] = useState(false);
@@ -26,6 +27,7 @@ function BasicForm() {
         
         // IMPORTANT. Taking the values submitted and adding it to "accounts.""
         handleSetAccountData(values);
+        setLoggedIn(true)
     
         actions.resetForm({
             value: {
@@ -134,11 +136,12 @@ function BasicForm() {
                 <div className='card form-control relative' style={{ borderSizing: 'border-box', backgroundColor: 'lightblue', position: 'static', paddingBottom: '40%'}}>
                 <div className="card w-50" style={{marginTop: '20%', marginRight: 'auto', marginLeft: 'auto', backgroundColor: 'pink', border: '2px solid green'}}>
                     <div className="card-body">
-                        <h5 className="card-title">Success! Your account has been created.</h5>
-                        <p className="card-text">What's better than a bank account with us?...How about another bank account with us? Piggy is hungry!</p>
-                        <button type="submit" className="btn btn-success" 
+                        <h5 className="card-title">Welcome Back {accounts.map((account) => account.email)}</h5>
+                        <Link type="submit" className="btn btn-success" 
                         // setter function setShow(true) for the onClick makes the create account form return to the page
-                        onClick={() => setShow(true)}>Add another account</button>
+                        // onClick={() => setShow(true)}
+                        to={'/deposit'}
+                        >Let's Bank</Link>
                     </div>
                     </div>
               

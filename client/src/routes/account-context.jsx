@@ -12,18 +12,21 @@ export const AccountProvider = ({ children }) => {
 
   // useState hook where the state variable "accounts" is being defined along with setter function used to update account information. 
   const [accounts, setAccounts] = useState([]);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   // Function that takes the new data or values, and adds them to the accounts. "This function is reponsible for updating the account information in the state." 
   // Is this where I would add connection to a db? 
   const handleSetAccountData = (data) => {
     // update the accounts. spread syntax for the ...accounts already created, and the data parameter to update it. In the create-account, "values"  from the formik end up being the argument we pass into handleSetAccountData(data)
-    setAccounts([...accounts, data])
+    setAccounts([...accounts, data]);
+    // setLoggedIn(true);
+    
   }
 
   return (
     // Providing a value that is: A function to modify the account data, and the state variable "accounts"
     // The two things defined in this - accounts useState & handleSetAccountData(data) - are used for the value of the AccountContext.Provider 
-    <AccountContext.Provider value={{ handleSetAccountData, accounts }}>
+    <AccountContext.Provider value={{ handleSetAccountData, accounts, loggedIn, setLoggedIn }}>
       {children}
     </AccountContext.Provider>
   )
