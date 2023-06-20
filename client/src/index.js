@@ -4,7 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import ErrorPage from '../src/error-page';
+import ErrorPage from './error-page';
 import AllData from './routes/all-data';
 import CreateAccount from './routes/create-account.jsx';
 import Deposit from './routes/deposit';
@@ -15,7 +15,7 @@ import Login from './routes/login';
 
 // imporiting Contexts for router
 import { AccountProvider } from './routes/account-context';
-import { BalanceProvider } from "../src/routes/balance-context";
+import { BalanceProvider } from "./routes/balance-context";
 
 
 // setting up my routes

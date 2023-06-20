@@ -1,6 +1,6 @@
 import { Link, Outlet, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import Pig_Logo from '../images/Pig_Logo.png';
 // import the code for balance context
 // import { BalanceContext } from "./balance-context";

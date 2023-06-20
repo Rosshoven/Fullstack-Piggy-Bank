@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.c3e4631f.css",
+    "main.js": "./static/js/main.af0d96ec.js",
+    "static/media/Pig_Withdraw.jpg": "./static/media/Pig_Withdraw.20677a9865ec471c750a.jpg",
+    "static/media/home_piggy.jpg": "./static/media/home_piggy.ae836ce120888b0da305.jpg",
+    "static/media/Pig_Logo.png": "./static/media/Pig_Logo.bc965b38219e1da98061.png",
+    "index.html": "./index.html",
+    "main.c3e4631f.css.map": "./static/css/main.c3e4631f.css.map",
+    "main.af0d96ec.js.map": "./static/js/main.af0d96ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3e4631f.css",
+    "static/js/main.af0d96ec.js"
+  ]
+}

@@ -1,29 +1,39 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+// var cors = require('cors');
 const port = 3000;
-
-// const Home = require('./client/src/routes/home');
-
+const path = require('path');
 
 
 
-
-app.use(express.static('client'));
-
+// Serving the static files from my CRA
+app.use(express.static(path.join(__dirname, 'build')));
+// Home Static files
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+// app.use(cors());
 
 // Home
-app.get('/', (req, res) => {
-    res.send('HOME! Where my fridge has pickles, HOME!');
-});
+// app.get('/', (req, res) => {
+//     res.send('HOME! Where my fridge has pickles, HOME!');
+// });
 
 // Create Account
-app.get('/create-account', (req, res) => {
-    res.send('Create Account Form');
+app.get('/account/create/:name/:email/:password', (req, res) => {
+    res.send({
+        name: req.params.name,
+        email: req.params.email,
+        password: req.params.password
+    });
 });
 
 // Login
-app.get('/login', (req, res) => {
-    res.send('Login Form');
+app.get('/account/login/:email/:password', (req, res) => {
+    res.send({
+        email: req.params.email,
+        password: req.params.password
+    });
 });
 
 // Deposit
