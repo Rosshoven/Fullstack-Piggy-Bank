@@ -1,8 +1,18 @@
+// import entire mongoose library - Mongoose is great way to interact with MongoDB
+const mongoose = require("mongoose");
+
 const express = require('express');
 const app = express();
 // var cors = require('cors');
 const port = 3000;
 const path = require('path');
+
+// connect to my localhost mondgodb instance upon starting up the server
+mongoose.connect("mongodb://localhost/mybandbankproject/users", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+mongoose.set('debug', true);
 
 
 
