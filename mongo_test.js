@@ -15,18 +15,21 @@
 //     // client.close();
 // });
 
-
+console.log('hi');
 const MongoClient = require('mongodb').MongoClient;
 
 const url = 'mongodb://localhost:27017';
 
 MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
+    console.log("Hi #2");
      // defining database name
      const dbName = `mybandbankproject`;
      const db = client.db(dbName);
 
      // insert into customer table
     let collection = db.collection('customers');
+    const userName = "Michael";
+    const email = "Michael@json.com";
     let doc = {userName, email};
     collection.insertOne(doc, {writeConcern:1}, function (err, result) {
         console.log('Document insert');
