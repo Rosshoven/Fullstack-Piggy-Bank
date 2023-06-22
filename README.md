@@ -1,4 +1,4 @@
-<img src="/client/src/image/Pig_Logo.png" />
+<img src="/client/src/images/Pig_Logo.png" />
 
 # Piggy-Bank
 Fullstack Banking App...in production.
