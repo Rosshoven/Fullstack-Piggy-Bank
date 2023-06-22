@@ -1,5 +1,8 @@
 // import entire mongoose library - Mongoose is great way to interact with MongoDB
 const mongoose = require("mongoose");
+const User = require('./models/User.js')
+
+var dal = require('./dal.js')
 
 const express = require('express');
 const app = express();
@@ -8,7 +11,7 @@ const port = 3000;
 const path = require('path');
 
 // connect to my localhost mondgodb instance upon starting up the server
-mongoose.connect("mongodb://localhost/mybandbankproject/users", {
+mongoose.connect("mongodb://localhost/mybandbankproject", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
@@ -30,11 +33,22 @@ app.get('/', function (req, res) {
 // });
 
 // Create Account
-app.get('/account/create/:name/:email/:password', (req, res) => {
-    res.send({
-        name: req.params.name,
-        email: req.params.email,
-        password: req.params.password
+// app.get('/account/create/:name/:email/:password', (req, res) => {
+//     res.send({
+//         name: req.params.name,
+//         email: req.params.email,
+//         password: req.params.password
+//     });
+// });
+
+
+// route to create new users
+app.get('/account/create/:userName/:email/:password', function (req, res) {
+    // create user
+    dal.create(req.params.userName, req.params.email, req.params.password)
+    .then((user) => {
+        console.log(user);
+        res.send(user);
     });
 });
 

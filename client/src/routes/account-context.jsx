@@ -20,6 +20,12 @@ export const AccountProvider = ({ children }) => {
     // update the accounts. spread syntax for the ...accounts already created, and the data parameter to update it. In the create-account, "values"  from the formik end up being the argument we pass into handleSetAccountData(data)
     setAccounts([...accounts, data]);
     // setLoggedIn(true);
+    const url = `/account/create/${data.userName}/${data.email}/${data.password}`;
+        (async () => {
+            let res = await fetch(url);
+            let data = await res.json();
+            console.log(data);
+        })();
     
   }
 

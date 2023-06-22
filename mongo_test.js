@@ -18,14 +18,25 @@
 
 const MongoClient = require('mongodb').MongoClient;
 
-const uri = 'mongodb://localhost:27017';
+const url = 'mongodb://localhost:27017';
 
-MongoClient.connect(uri, {useUnifiedTopology: true}, function(err, client) {
+MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
+     // defining database name
+     const dbName = `mybandbankproject`;
+     const db = client.db(dbName);
+
+     // insert into customer table
+    let collection = db.collection('customers');
+    let doc = {userName, email};
+    collection.insertOne(doc, {writeConcern:1}, function (err, result) {
+        console.log('Document insert');
+    });
+
     if (err) {
-        console.error('Error connecting to MongoDB:', err);
+        console.error('Error connecting to MongoDB:');
     } else {
         console.log('Connected to MongoDBBB');
-        client.close();
+        // client.close();
     }
 });
 

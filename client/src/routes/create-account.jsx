@@ -8,9 +8,12 @@ import { basicSchema } from "../schemas/schema";
 import { useAccountContext } from "./account-context";
 import { Link } from "react-router-dom";
 
+// import { useBalanceContext } from "./balance-context";
+
 function BasicForm() {
     // defining the handleSetAccountData by destructring. Will be imperitive to use to update the accounts, coming from the Account Context so it will be saved.
     const { handleSetAccountData, setLoggedIn } = useAccountContext();
+    // const {balance, setBalance} = useBalanceContext();
 
     // useState hook used to display text on the button: Create Another Account' OR 'Create Account'  
     const [createAccountTrue, setCreateAccountTrue] = useState(false);
@@ -28,6 +31,8 @@ function BasicForm() {
         // IMPORTANT. Taking the values submitted and adding it to "accounts.""
         handleSetAccountData(values);
         setLoggedIn(true);
+
+        
     
         actions.resetForm({
             value: {
