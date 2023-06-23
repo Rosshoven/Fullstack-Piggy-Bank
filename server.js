@@ -44,13 +44,16 @@ app.get('/', function (req, res) {
 
 // route to create new users
 app.get('/account/create/:userName/:email/:password', function (req, res) {
-    // create user
+    // create user - should i use the User model here? 
     dal.create(req.params.userName, req.params.email, req.params.password)
     .then((user) => {
         console.log(user);
         res.send(user);
     });
 });
+
+// Post to mongo    
+app.post('')
 
 // Login
 app.get('/account/login/:email/:password', (req, res) => {

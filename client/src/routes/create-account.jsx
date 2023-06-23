@@ -25,9 +25,15 @@ function BasicForm() {
         console.log(values);
         console.log(actions);
 
+        console.log("Is this happening twice??")
         // restful route post request, creates a moment of "processing" for the client
         // Replace with actual request to an endpoint on the server
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        // await new Promise((resolve) => setTimeout(resolve, 1000));
+        // Relative path
+        const response = await fetch(`/account/create/${values.userName}/${values.email}/${values.password}`);
+        if (!response.ok) {
+            return
+        }
         
         // IMPORTANT. Taking the values submitted and adding it to "accounts.""
         handleSetAccountData(values);
