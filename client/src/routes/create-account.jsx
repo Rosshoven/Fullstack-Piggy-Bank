@@ -26,6 +26,7 @@ function BasicForm() {
         console.log(actions);
 
         // restful route post request, creates a moment of "processing" for the client
+        // Replace with actual request to an endpoint on the server
         await new Promise((resolve) => setTimeout(resolve, 1000));
         
         // IMPORTANT. Taking the values submitted and adding it to "accounts.""
