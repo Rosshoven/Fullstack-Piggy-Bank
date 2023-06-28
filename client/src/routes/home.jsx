@@ -10,7 +10,7 @@ export default function Home() {
                 <img style={{ borderTop: 'solid 2px green', borderBottom: 'solid 2px green', borderRadius: '0%'}} src={home_piggy} className="card-img-top" alt="Piggy Bank on Gold Coins" />
                 
                 <div className="card-body" style={{ backgroundColor: 'pink' }}>
-                    <h5 className="card-title" style={{fontSize: '1.4rem', fontFamily: 'Forum, cursive'}}>Here at Piggy Bank you can feel safe and secure knowing that your money is protected by a pig. Only you can feed the piggy, and only you can break the piggy. Get $100 just for opening an account today!</h5>
+                    <h5 className="card-title" style={{fontSize: '1.4rem', fontFamily: 'Forum, cursive'}}>Here at Piggy Bank you can feel safe and secure knowing that your money is protected by a pig. Only you can feed the piggy, and only you can break the piggy. Open an account today and get $100!</h5>
                     {/* <p className="card-text" style={{fontFamily: 'Forum, cursive', fontSize:'1.4rem', color: 'white'}}>
                         <a href="create-account" type="button" className="btn btn btn-outline-success" style={{color: 'white', fontFamily: 'Forum, cursive', fontSize:'1.4rem' }}>
                             Create Account</a> to get started!</p> */}

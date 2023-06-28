@@ -41,17 +41,7 @@ function login (email, password) {
         // findOne() is a promise
         collection.findOne({"email": email, "password": password})
         .then(resolve)
-        // if (user === null) {
-        //     alert('Please Enter A Valid User');
-        //     return
-        // } else {
-        //     resolve
-        // }
-        // const lgn = {email, password};
-        // collection.auth(lgn)
-        // .catch(alert('Please Enter A Valid User'));
-    })
-    
+    }) 
 }
 
 // all users

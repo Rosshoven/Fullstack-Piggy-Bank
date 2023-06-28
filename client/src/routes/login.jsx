@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 function BasicForm() {
     // defining the handleSetAccountData by destructring. Will be imperitive to use to update the accounts, coming from the Account Context so it will be saved.
-    const { accounts, setLoggedIn } = useAccountContext();
+    const { handleSetAccountData, accounts, setLoggedIn } = useAccountContext();
 
     // useState hook used to display text on the button: Create Another Account' OR 'Create Account'  
     // const [createAccountTrue, setCreateAccountTrue] = useState(false);
@@ -30,7 +30,7 @@ function BasicForm() {
             }
         
         // IMPORTANT. Taking the values submitted and adding it to "accounts.""
-        // handleSetAccountData(values);
+        handleSetAccountData(values);
         setLoggedIn(true)
     
         actions.resetForm({
@@ -137,7 +137,7 @@ function BasicForm() {
         </div>
         : (
                 <>
-                <div className='card form-control relative' style={{ borderSizing: 'border-box', backgroundColor: 'lightblue', position: 'static', paddingBottom: '40%'}}>
+                <div className='card form-control relative' style={{ borderSizing: 'border-box', backgroundColor: 'lightblue', position: 'static', paddingBottom: '100%'}}>
                 <div className="card w-50" style={{marginTop: '20%', marginRight: 'auto', marginLeft: 'auto', backgroundColor: 'pink', border: '2px solid green'}}>
                     <div className="card-body">
                         <h5 className="card-title">Welcome Back {accounts.map((account) => account.email)}</h5>

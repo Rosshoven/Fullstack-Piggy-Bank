@@ -43,7 +43,6 @@ app.get('/account/create/:userName/:email/:password', function (req, res) {
 app.get('/account/login/:email/:password', (req, res) => {
         dal.login(req.params.email, req.params.password)
         .then((user) => {
-          
           if (!user) {
             // Send user the error status
             return res.sendStatus(400);
@@ -60,23 +59,23 @@ app.post('')
 
 
 // Deposit
-app.get('/deposit', (req, res) => {
-    res.send('Deposit');
-});
+// app.get('/deposit', (req, res) => {
+//     res.send('Deposit');
+// });
 
-// Withdraw
-app.get('/withdraw', (req, res) => {
-    res.send('Withdraw');
-});
+// // Withdraw
+// app.get('/withdraw', (req, res) => {
+//     res.send('Withdraw');
+// });
 
-// Balance
-app.get('/balance', (req, res) => {
-    res.send('Balance');
-});
+// // Balance
+// app.get('/balance', (req, res) => {
+//     res.send('Balance');
+// });
 
-app.get('/all-data', (req, res) => {
-    res.send('All Data');
-})
+// app.get('/all-data', (req, res) => {
+//     res.send('All Data');
+// })
 
 // catch all-handle all requests if no one else handled it.
 app.get('*', function (req, res) {
