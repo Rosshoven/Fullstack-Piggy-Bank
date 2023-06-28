@@ -22,7 +22,8 @@ export default function Root() {
   const [lgnShown, setLgnShown] = useState(false);
   const [depShown, setDepShown] = useState(false);
   const [withdrawShown, setWithdrawShown] = useState(false);
-  const [allDataShown, setAllDataShown] = useState(false);
+  // Removed All Data page, so this state is not needed. Keeping commented out - not deleting - for the memories.
+  // const [allDataShown, setAllDataShown] = useState(false);
 
   
   const { accounts, loggedIn } = useAccountContext();
@@ -114,12 +115,12 @@ export default function Root() {
                     {withdrawShown && (<div style={{borderRadius: '5px', fontSize: '1rem', color: 'black', backgroundColor: 'antiquewhite', marginTop: '3%', display: 'flex', justifyContent: 'center', padding: '2%'}}>Break the Piggy!</div>)}
                   </li>
 
-                  <li className="nav-link" onMouseEnter={() => setAllDataShown(true)} onMouseLeave={() => setAllDataShown(false)}>
+                  {/* <li className="nav-link" onMouseEnter={() => setAllDataShown(true)} onMouseLeave={() => setAllDataShown(false)}>
                   <NavLink to={'all-data'}  className={({isActive}) => {
                       return `nav-link active${isActive ? ' bg-success hover:bg-gray-700 hover:text-white' : 'bg-gray-900 text-white'}`
                     }}>All Data</NavLink>
                     {allDataShown && (<div style={{borderRadius: '5px', fontSize: '1rem', color: 'black', backgroundColor: 'antiquewhite', marginTop: '3%', display: 'flex', justifyContent: 'center', padding: '2%'}}>User's Piggy Bank info.</div>)}
-                  </li>
+                  </li> */}
                 </ul> 
 
               </div>
