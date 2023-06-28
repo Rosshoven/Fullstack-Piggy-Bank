@@ -27,9 +27,9 @@ function BasicForm() {
 
         console.log("Is this happening twice??")
         // restful route post request, creates a moment of "processing" for the client
-        // Replace with actual request to an endpoint on the server
         // await new Promise((resolve) => setTimeout(resolve, 1000));
-        // Relative path
+        // Replace with actual request to an endpoint on the server
+        // Relative path - took out localhost 3000 so this fetch will work with any URL
         const response = await fetch(`/account/create/${values.userName}/${values.email}/${values.password}`);
         if (!response.ok) {
             return

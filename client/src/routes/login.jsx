@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 function BasicForm() {
     // defining the handleSetAccountData by destructring. Will be imperitive to use to update the accounts, coming from the Account Context so it will be saved.
-    const { handleSetAccountData, accounts, setLoggedIn } = useAccountContext();
+    const { accounts, setLoggedIn } = useAccountContext();
 
     // useState hook used to display text on the button: Create Another Account' OR 'Create Account'  
     // const [createAccountTrue, setCreateAccountTrue] = useState(false);
@@ -22,11 +22,15 @@ function BasicForm() {
         console.log(values);
         console.log(actions);
 
-        // restful route post request, creates a moment of "processing" for the client
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        console.log(`Am I logging in ${values.email}`);
+        // relative path...took out localhost 3000 so this fetch will work with any URL 
+        const response = await fetch(`/account/login/${values.email}/${values.password}`);
+            if (!response.ok) {
+                return alert("Please Enter a valid user");
+            }
         
         // IMPORTANT. Taking the values submitted and adding it to "accounts.""
-        handleSetAccountData(values);
+        // handleSetAccountData(values);
         setLoggedIn(true)
     
         actions.resetForm({

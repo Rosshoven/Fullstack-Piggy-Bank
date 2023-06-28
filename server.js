@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 // import entire mongoose library - Mongoose is great way to interact with MongoDB
 const mongoose = require("mongoose");
 const User = require('./models/User.js')
@@ -20,29 +22,14 @@ mongoose.set('debug', true);
 
 
 // Serving the static files from my CRA
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 // Home Static files
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+
 // app.use(cors());
 
-// Home
-// app.get('/', (req, res) => {
-//     res.send('HOME! Where my fridge has pickles, HOME!');
-// });
 
-// Create Account
-// app.get('/account/create/:name/:email/:password', (req, res) => {
-//     res.send({
-//         name: req.params.name,
-//         email: req.params.email,
-//         password: req.params.password
-//     });
-// });
-
-
-// route to create new users
+// route to create new users - this is an API endpoint.
+// Meant for data not for presentation to the user. 
 app.get('/account/create/:userName/:email/:password', function (req, res) {
     // create user - should i use the User model here? 
     dal.create(req.params.userName, req.params.email, req.params.password)
@@ -52,16 +39,25 @@ app.get('/account/create/:userName/:email/:password', function (req, res) {
     });
 });
 
+// Login route - API endpoint
+app.get('/account/login/:email/:password', (req, res) => {
+        dal.login(req.params.email, req.params.password)
+        .then((user) => {
+          
+          if (!user) {
+            // Send user the error status
+            return res.sendStatus(400);
+          }  
+          console.log(user);
+          res.send(user);
+        })
+    });
+
+
+
 // Post to mongo    
 app.post('')
 
-// Login
-app.get('/account/login/:email/:password', (req, res) => {
-    res.send({
-        email: req.params.email,
-        password: req.params.password
-    });
-});
 
 // Deposit
 app.get('/deposit', (req, res) => {
@@ -82,8 +78,27 @@ app.get('/all-data', (req, res) => {
     res.send('All Data');
 })
 
+// catch all-handle all requests if no one else handled it.
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
 
 // connecting port 
 app.listen(port, () => {
-console.log(`Porto Porto Porto ${port}`)
+console.log(`Port Portt Porttt ${port}`)
   });
+
+
+// Home
+// app.get('/', (req, res) => {
+//     res.send('HOME! Where my fridge has pickles, HOME!');
+// });
+
+// Create Account
+// app.get('/account/create/:name/:email/:password', (req, res) => {
+//     res.send({
+//         name: req.params.name,
+//         email: req.params.email,
+//         password: req.params.password
+//     });
+// });

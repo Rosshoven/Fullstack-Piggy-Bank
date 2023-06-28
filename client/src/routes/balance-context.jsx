@@ -17,7 +17,7 @@ export const BalanceContext = createContext(null);
 export const BalanceProvider = ({ children }) => {
 
 
-    const [balance, setBalance] = useState(0);
+    const [balance, setBalance] = useState(100);
 
     return (
         <BalanceContext.Provider value = {{balance, setBalance }}>
