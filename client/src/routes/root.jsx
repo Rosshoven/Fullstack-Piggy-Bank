@@ -30,7 +30,7 @@ export default function Root() {
 
     return (
       <>   
-      {!loggedIn  ? (
+      {!loggedIn ? (
         <div>
           <nav style={{borderBottom: 'solid 1.5px green', position: 'fixed', width: '100%', backgroundColor: '#ffc4cd', fontFamily: 'Forum, cursive', fontSize: '1.5rem'}} className="nav nav-pills nav-justified navbar navbar-expand-lg navbar-dark sticky-top">
             <div className="container-fluid">

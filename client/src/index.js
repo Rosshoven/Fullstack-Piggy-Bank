@@ -67,7 +67,7 @@ root.render(
     {/* Did the same for Balance Provider */}
     <AccountProvider>
       <BalanceProvider>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
       </BalanceProvider>
     </AccountProvider>
   </React.StrictMode>

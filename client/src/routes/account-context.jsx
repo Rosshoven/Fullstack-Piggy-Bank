@@ -34,6 +34,7 @@ export const AccountProvider = ({ children }) => {
   return (
     // Providing a value that is: A function to modify the account data, and the state variable "accounts"
     // The two things defined in this - accounts useState & handleSetAccountData(data) - are used for the value of the AccountContext.Provider 
+    // loggedIn State is used to change the tab options in the navbar upon logging in or creating account
     <AccountContext.Provider value={{ handleSetAccountData, accounts, loggedIn, setLoggedIn }}>
       {children}
     </AccountContext.Provider>
