@@ -1,10 +1,12 @@
+require("dotenv").config();
 // dal = data abstraction layer
 // Import Mongodb
 const MongoClient = require('mongodb').MongoClient;
 
 // const mongoose = require('mongoose');
 
-const uri = 'mongodb://localhost:27017';
+// connectin...
+const uri = process.env.MONGO_URI || 'mongodb://localhost:27017';
 
 // I'm getting a db at some point
 let db = null;

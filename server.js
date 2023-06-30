@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 // import entire mongoose library - Mongoose is great way to interact with MongoDB
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 // const User = require('./models/User.js')
 
 var dal = require('./dal.js')
@@ -15,12 +15,12 @@ const path = require('path');
 // MongoDB Compass connectionstring  from Anthony office hour
 // const mongodbConnectionString = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@webdev`
 
-// connect to my localhost mondgodb instance upon starting up the server
-mongoose.connect("mongodb://localhost/mybandbankproject", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
-mongoose.set('debug', true);
+// connect to my localhost mondgodb instance upon starting up the server...redundant solution, happening inside DAL
+// mongoose.connect("mongodb://localhost/mybandbankproject", {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// });
+// mongoose.set('debug', true);
 
 
 
