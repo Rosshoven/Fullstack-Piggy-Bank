@@ -2,7 +2,7 @@ require("dotenv").config();
 
 // import entire mongoose library - Mongoose is great way to interact with MongoDB
 const mongoose = require("mongoose");
-const User = require('./models/User.js')
+// const User = require('./models/User.js')
 
 var dal = require('./dal.js')
 
@@ -11,6 +11,9 @@ const app = express();
 // var cors = require('cors');
 const port = 3000;
 const path = require('path');
+
+// MongoDB Compass connectionstring  from Anthony office hour
+// const mongodbConnectionString = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@webdev`
 
 // connect to my localhost mondgodb instance upon starting up the server
 mongoose.connect("mongodb://localhost/mybandbankproject", {
