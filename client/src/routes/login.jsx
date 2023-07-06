@@ -17,19 +17,20 @@ function BasicForm() {
     // show state sets what is displayed on page: Form or Success message
     const [show, setShow] = useState(true);
 
-    // onSubmit function. "values" is the user information submitted and "actions" are a long set of methods provided by formik. I end up using resetForm(). The values I pass into the handleSetAccountData function that is created in account-context
+    // onSubmit function. "values" is the user information submitted and "actions" are a long set of methods provided by formik. I end up using resetForm(). The values I then pass into handleSetAccountData() that lives in account-context
     async function onSubmit(values, actions) {
         console.log(values);
         console.log(actions);
-
         console.log(`Am I logging in ${values.email}`);
+
+        // Call fetch to server, asking if submitted email and password matches any in db. 
         // relative path...took out localhost 3000 so this fetch will work with any URL 
         const response = await fetch(`/account/login/${values.email}/${values.password}`);
             if (!response.ok) {
                 return alert("Please Enter a valid user");
             }
         
-        // IMPORTANT. Taking the values submitted and adding it to "accounts.""
+        // IMPORTANT. Taking the authenticated values submitted and 1)adding it to account-context to put email in top-right hand corner 2)setting loggedIn to true so navbar changes for a logged in user
         handleSetAccountData(values);
         setLoggedIn(true)
     

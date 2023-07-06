@@ -5,15 +5,13 @@ const MongoClient = require('mongodb').MongoClient;
 
 // const mongoose = require('mongoose');
 
-// connectin...
+// connection...
 const uri = process.env.MONGO_URI || 'mongodb://localhost:27017';
 
 // I'm getting a db at some point
 let db = null;
 
-// const User = require('./models/User')
-
-// connect to Mongo
+// connect to Mongodb
 MongoClient.connect(uri, {useUnifiedTopology: true})
     .then((client) => {
         db = client.db('mybandbankproject');

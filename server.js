@@ -55,30 +55,8 @@ app.get('/account/login/:email/:password', (req, res) => {
         })
     });
 
-
-
 // Post to mongo    
 app.post('')
-
-
-// Deposit
-// app.get('/deposit', (req, res) => {
-//     res.send('Deposit');
-// });
-
-// // Withdraw
-// app.get('/withdraw', (req, res) => {
-//     res.send('Withdraw');
-// });
-
-// // Balance
-// app.get('/balance', (req, res) => {
-//     res.send('Balance');
-// });
-
-// app.get('/all-data', (req, res) => {
-//     res.send('All Data');
-// })
 
 // catch all-handle all requests if no one else handled it.
 app.get('*', function (req, res) {
@@ -91,6 +69,12 @@ console.log(`Port Portt Porttt ${port}`)
   });
 
 
+
+
+
+
+
+  
 // Home
 // app.get('/', (req, res) => {
 //     res.send('HOME! Where my fridge has pickles, HOME!');

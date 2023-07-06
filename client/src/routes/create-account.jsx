@@ -25,17 +25,19 @@ function BasicForm() {
         console.log(values);
         console.log(actions);
 
-        console.log("Is this happening twice??")
+        // console.log("Is this happening twice??") --Was happening twice because I was serving static as well (i think)
+        
         // restful route post request, creates a moment of "processing" for the client
         // await new Promise((resolve) => setTimeout(resolve, 1000));
-        // Replace with actual request to an endpoint on the server
+        
+        // Actual request to an endpoint on the server
         // Relative path - took out localhost 3000 so this fetch will work with any URL
         const response = await fetch(`/account/create/${values.userName}/${values.email}/${values.password}`);
         if (!response.ok) {
             return
         }
         
-        // IMPORTANT. Taking the values submitted and adding it to "accounts.""
+        // IMPORTANT. Taking the values submitted and adding it to accounts context
         handleSetAccountData(values);
         setLoggedIn(true);
 
