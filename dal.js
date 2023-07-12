@@ -44,6 +44,15 @@ function login (email, password) {
     }) 
 }
 
+// all users
+// function all() {
+//     return new Promise((resolve, reject) => {
+//         const customers = db.collection('users').find({}).toArray(function (err, docs) {
+//             err ? reject(err) : resolve(docs);
+//         });
+//     })
+// }
+
 module.exports = {create, login};
 
 
