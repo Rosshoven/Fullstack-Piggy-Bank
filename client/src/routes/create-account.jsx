@@ -7,6 +7,7 @@ import { basicSchema } from "../schemas/schema";
 // importing the Account Context
 import { useAccountContext } from "./account-context";
 import { Link } from "react-router-dom";
+import '../index.css'; 
 
 // import { useBalanceContext } from "./balance-context";
 
@@ -82,7 +83,9 @@ function BasicForm() {
 
             <form onSubmit={handleSubmit} autoComplete="off">
 
-                <div className="card-body" style={{ borderRadius: '5px', width: '18rem', marginRight: 'auto', marginLeft: 'auto', marginTop: '10%', backgroundColor: '#a6a6a6',  border: '2px solid green' }}>
+                <div className="card-body" id="accountCard" 
+                // style={{ borderRadius: '5px', width: '18rem', marginRight: 'auto', marginLeft: 'auto', marginTop: '10%', backgroundColor: '#a6a6a6',  border: '2px solid green' }}
+                >
                     <h2 style={{ margin: '2% auto', padding: '2%', backgroundColor: 'pink', borderRadius: '20px', fontFamily: 'Forum, cursive', fontSize: '2.2rem', fontWeight: 'bold', display: 'flex', justifyContent: 'center' }}>Create Account</h2>
                     <hr />
                     {/* ADD IMAGE    <img src="..." class="card-img-top" alt="..." /> */}

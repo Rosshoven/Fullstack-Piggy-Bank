@@ -11,3 +11,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#home {
+  background-color: pink; 
+  margin-right: auto; 
+  margin-left: auto; 
+  margin-top: 7.5%; 
+  border: solid 4px green;
+  width: 40%; 
+  font-family: "Forum", cursive; 
+  font-size: 1.4rem;
+}
+
+#logo {
+      font-size: 5rem;
+}
+
+#accountCard {
+border-radius: 5px; 
+width: 18rem; 
+margin: 10% auto;
+background-color: #a6a6a6;  
+border: 2px solid green;
+}
+
+ /* MEDIA QUERIES */
+ @media only screen and (max-width: 1277px) {
+  #home {
+      /* display: flex;
+      flex-wrap: wrap; */
+      /* padding: 1%; */
+      width: 40%;
+      margin-top: 10%;
+  }
+}
+
+  /* iPhone SE */
+@media only screen and (max-width: 375px) {
+  #home {
+    margin: 35% auto;
+    width: 90%;
+}
+
+#logo {
+  font-size: 3rem;
+  margin: auto;
+}
+
+h6 {
+  display: none;
+}
+
+#accountCard {
+  margin: 35% auto;
+  width: 90%;
+}
+
+}
