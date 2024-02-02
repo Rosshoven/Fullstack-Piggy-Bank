@@ -19,18 +19,21 @@ code {
 }
 
 #home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: pink; 
   margin-right: auto; 
   margin-left: auto; 
-  margin-top: 7.5%; 
+  margin-top: 11rem; 
   border: solid 4px green;
   width: 40%; 
   font-family: "Forum", cursive; 
-  font-size: 1.4rem;
 }
 
 #logo {
-      font-size: 5rem;
+      font-size: 4rem;
 }
 
 #accountCard {
@@ -52,25 +55,88 @@ border: 2px solid green;
   }
 }
 
-  /* iPhone SE */
-@media only screen and (max-width: 375px) {
+/* MEDIA QUERIES */
+
+
+@media only screen and (max-width: 1040px) {
+  #home {
+    margin: 15% auto;
+    width: 50%;
+}
+}
+
+@media only screen and (max-width: 751px) {
+  #logo {
+    font-size: 3rem;
+}
+}
+
+@media only screen and (max-width: 746px) {
+  #home {
+    margin: 20% auto;
+    width: 50%;
+}
+}
+
+@media only screen and (max-width: 583px) {
+  #home {
+    margin: 25% auto;
+    width: 50%;
+}
+}
+
+@media only screen and (max-width: 567px) {
+  #logo {
+    font-size: 2.5rem;
+}
+}
+
+
+@media only screen and (max-width: 480px) {
   #home {
     margin: 35% auto;
-    width: 90%;
+    width: 50%;
 }
+#logo {
+  font-size: 2.5rem;
+}
+
+}
+
+@media only screen and (max-width: 475px) {
 
 #logo {
-  font-size: 3rem;
-  margin: auto;
+  font-size: 2rem;
 }
 
-h6 {
-  display: none;
 }
 
-#accountCard {
-  margin: 35% auto;
-  width: 90%;
+@media only screen and (max-width: 383px) {
+  #logo {
+   font-size: 1.9rem;
+}
 }
 
+  /* iPhone SE */
+  @media only screen and (max-width: 375px) {
+    #home {
+      margin: 35% auto;
+      width: 90%;
+  }
+  
+  #logo {
+    font-size: rem;
+    margin: auto;
+    font-size: 1.8rem;
+  }
+  
+  h6 {
+    display: none;
+  }
+  
+  #accountCard {
+    margin: 35% auto;
+    width: 90%;
+  }
+  
 }
