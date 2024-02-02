@@ -57,6 +57,19 @@ border: 2px solid green;
 
 /* MEDIA QUERIES */
 
+@media only screen and (max-width: 1478px) {
+  #home {
+    margin: 8% auto;
+    width: 50%;
+}
+}
+
+@media only screen and (max-width: 1200px) {
+  #home {
+    margin: 10% auto;
+    width: 50%;
+}
+}
 
 @media only screen and (max-width: 1040px) {
   #home {
