@@ -65,11 +65,13 @@ function BasicForm() {
         // show initial state is true so the form starting below will be displayed
         show ? 
         
-        <div className='card form-control relative' style={{ borderSizing: 'border-box', backgroundColor: 'lightblue', position: 'static', padding: '3% 0% 30% 0%' }}>
+        <div className='card form-control relative'  id="login">
 
             <form onSubmit={handleSubmit} autoComplete="off">
 
-                <div className="card-body" style={{ borderRadius: '5px', width: '18rem', marginRight: 'auto', marginLeft: 'auto', marginTop: '10%', backgroundColor: '#a6a6a6',  border: '2px solid green' }}>
+                <div className="card-body" id="accountCard"
+                // style={{ borderRadius: '5px', width: '18rem', marginRight: 'auto', marginLeft: 'auto', marginTop: '20%', backgroundColor: '#a6a6a6',  border: '2px solid green' }}
+                >
                     <h2 style={{ margin: '2% auto', padding: '2%', backgroundColor: 'pink', borderRadius: '20px', fontFamily: 'Forum, cursive', fontSize: '2.2rem', fontWeight: 'bold', display: 'flex', justifyContent: 'center' }}>Login</h2>
                     <hr />
                     {/* ADD IMAGE    <img src="..." class="card-img-top" alt="..." /> */}

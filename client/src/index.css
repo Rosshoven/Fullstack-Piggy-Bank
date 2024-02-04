@@ -41,7 +41,13 @@ code {
   background-color: lightblue; 
   position: static; 
   padding: 3% 0% 30% 0%;
-  height: 100%;
+}
+
+#login {
+  box-sizing: border-box;
+  background-color: lightblue;
+  position: static; 
+  padding: 3% 0% 30% 0%; 
 }
 
 #accountCard {
@@ -50,6 +56,7 @@ width: 18rem;
 margin: 10% auto;
 background-color: #a6a6a6;  
 border: 2px solid green;
+
 }
 
  /* MEDIA QUERIES */
