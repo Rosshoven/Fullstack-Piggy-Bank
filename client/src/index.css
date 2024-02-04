@@ -36,6 +36,14 @@ code {
       font-size: 4rem;
 }
 
+#create {
+  box-sizing: border-box; 
+  background-color: lightblue; 
+  position: static; 
+  padding: 3% 0% 30% 0%;
+  height: 100%;
+}
+
 #accountCard {
 border-radius: 5px; 
 width: 18rem; 
@@ -64,6 +72,14 @@ border: 2px solid green;
 }
 }
 
+@media only screen and (max-width: 1222px) {
+  #create {
+    margin: 2rem auto;
+    width: 100%;
+
+}
+}
+
 @media only screen and (max-width: 1200px) {
   #home {
     margin: 10% auto;
@@ -76,11 +92,21 @@ border: 2px solid green;
     margin: 15% auto;
     width: 50%;
 }
+#create {
+  margin: 4rem auto;
+  width: 100%;
+
+}
 }
 
 @media only screen and (max-width: 751px) {
   #logo {
     font-size: 3rem;
+}
+#create {
+  margin: 5rem auto;
+  width: 100%;
+
 }
 }
 
@@ -101,6 +127,11 @@ border: 2px solid green;
 @media only screen and (max-width: 567px) {
   #logo {
     font-size: 2.5rem;
+}
+#create {
+  margin: 7rem auto;
+  width: 100%;
+
 }
 }
 
@@ -135,6 +166,7 @@ border: 2px solid green;
     #home {
       margin: 35% auto;
       width: 90%;
+      height: 100%;
   }
   
   #logo {
@@ -143,6 +175,12 @@ border: 2px solid green;
     font-size: 1.8rem;
   }
   
+  #create {
+    margin: 1rem auto;
+    width: 100%;
+  
+  }
+
   h6 {
     display: none;
   }

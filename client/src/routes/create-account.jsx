@@ -79,7 +79,7 @@ function BasicForm() {
         // show initial state is true so the form starting below will be displayed
         show ? 
         
-        <div className='card form-control relative' style={{ borderSizing: 'border-box', backgroundColor: 'lightblue', position: 'static', padding: '3% 0% 30% 0%' }}>
+        <div id="create" className='card form-control relative'>
 
             <form onSubmit={handleSubmit} autoComplete="off">
 
