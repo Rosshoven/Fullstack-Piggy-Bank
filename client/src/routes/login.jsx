@@ -142,7 +142,7 @@ function BasicForm() {
                 <>
                 <div className='card form-control relative' style={{ borderSizing: 'border-box', backgroundColor: 'lightblue', position: 'static', paddingBottom: '100%'}}>
                 <div className="card w-50" style={{marginTop: '20%', marginRight: 'auto', marginLeft: 'auto', backgroundColor: 'pink', border: '2px solid green'}}>
-                    <div className="card-body">
+                    <div className="card-body" id="loginsuccess">
                         <h5 className="card-title">Welcome Back {accounts.map((account) => account.email)}</h5>
                         <Link type="submit" className="btn btn-success" 
                         // setter function setShow(true) for the onClick makes the create account form return to the page

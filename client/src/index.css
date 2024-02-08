@@ -110,7 +110,7 @@ border: 2px solid green;
   #logo {
     font-size: 3rem;
 }
-#create, #login, #success {
+#create, #login, #success, #loginsuccess {
   margin: 5rem auto;
   width: 100%;
 
@@ -135,7 +135,7 @@ border: 2px solid green;
   #logo {
     font-size: 2.5rem;
 }
-#create, #login, #success {
+#create, #login, #success, #loginsuccess {
   margin: 7rem auto;
   width: 100%;
 
@@ -182,7 +182,7 @@ border: 2px solid green;
     font-size: 1.8rem;
   }
   
-  #create, #login, #success {
+  #create, #login, #success, #loginsuccess {
     margin: 1rem auto;
     width: 100%;
   
@@ -197,7 +197,7 @@ border: 2px solid green;
     width: 90%;
   }
 
-  #success {
+  #success, #loginsuccess {
     margin: 30% auto;
   }
   
