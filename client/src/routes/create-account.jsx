@@ -156,7 +156,7 @@ function BasicForm() {
                 <>
                 <div className='card form-control relative' style={{ borderSizing: 'border-box', backgroundColor: 'lightblue', position: 'static', paddingBottom: '100%'}}>
                 <div className="card w-50" style={{marginTop: '20%', marginRight: 'auto', marginLeft: 'auto', backgroundColor: 'pink', border: '2px solid green'}}>
-                    <div className="card-body">
+                    <div className="card-body" id="success">
                         <h5 className="card-title">Success! Your account has been created.</h5>
                         <p className="card-text"></p>
                         <Link className="navbar-brand btn btn-success"
