@@ -39,8 +39,9 @@ code {
 #create {
   box-sizing: border-box; 
   background-color: lightblue; 
-  position: static; 
+  position: fixed; 
   padding: 3% 0% 30% 0%;
+  height: 100%;
 }
 
 #login {
@@ -48,6 +49,7 @@ code {
   background-color: lightblue;
   position: fixed; 
   padding: 3% 0% 30% 0%; 
+  height: 100%;
 }
 
 #accountCard {
