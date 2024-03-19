@@ -30,6 +30,7 @@ code {
   border: solid 4px green;
   width: 40%; 
   font-family: "Forum", cursive; 
+  /* position: fixed; */
 }
 
 #logo {
@@ -48,8 +49,15 @@ code {
   box-sizing: border-box;
   background-color: lightblue;
   position: fixed; 
-  padding: 3% 0% 30% 0%; 
+  padding: 3% 0% 100% 0%; 
   height: 100%;
+}
+
+#loginSuccess {
+  margin: 20% auto; 
+  background-color: pink;
+  border: 2px solid green;
+  position: flex;
 }
 
 #accountCard {
@@ -112,10 +120,13 @@ border: 2px solid green;
   #logo {
     font-size: 3rem;
 }
-#create, #login, #success, #loginsuccess {
+#create, #login, #success {
   margin: 5rem auto;
   width: 100%;
+}
 
+#loginSuccess {
+  margin: 10rem auto; 
 }
 }
 
@@ -184,7 +195,7 @@ border: 2px solid green;
     font-size: 1.8rem;
   }
   
-  #create, #login, #success, #loginsuccess {
+  #create, #login, #success {
     margin: 1rem auto;
     width: 100%;
   
