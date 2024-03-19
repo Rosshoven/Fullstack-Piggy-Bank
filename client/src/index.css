@@ -215,3 +215,33 @@ border: 2px solid green;
   }
   
 }
+
+
+
+/* Extra CSS from index.html */
+.nav-link:hover {
+  background-color: #b1dae7;
+}
+
+.list-group-item {
+  background-color: #fdc8d0;
+}
+
+.card > ul {
+  margin-bottom: .6%;
+}
+
+label {
+  font-family: "Forum, cursive";
+  font-size: " 2.2rem";
+}
+h5, p {
+  font-family: "Forum, cursive"; 
+  font-size: '1.2rem';
+}
+
+.card-title,
+.card-text {
+  font-family: 'Forum, cursive';
+  font-size: '2.2rem';
+}
