@@ -10,6 +10,7 @@ import ATM from "../ATM";
 import Pig_Deposit from '../images/Pig_Deposit.jpg';
 
 import { useBalanceContext } from "./balance-context";
+import '../index.css'; 
 
 
 // Deposit component that processes a deposit 
@@ -61,7 +62,7 @@ export default function Deposit() {
 
     return (
         // div of the whole page, using flexbox to line up elements in column
-        <div style={{display: 'flex', flexDirection: 'column', padding: '10% 0% 40% 0%', backgroundColor: 'lightblue'}}>
+        <div style={{display: 'flex', flexDirection: 'column', padding: '10% 0% 100% 0%', backgroundColor: 'lightblue', height: '100%'}}>
             
             {/* HEADING */}
             <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>

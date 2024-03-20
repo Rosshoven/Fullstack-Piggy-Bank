@@ -3,6 +3,7 @@ import { useState } from "react";
 import ATM from "../ATM";
 import Pig_Withdraw from "../images/Pig_Withdraw.jpg";
 import {  useBalanceContext  } from "./balance-context";
+import '../'
 
 export default function Withdraw () {
   // withdraw state is used in handlechange where setWithdraw defines the withdrawal amount that is then used in handleSubmit
@@ -53,7 +54,7 @@ export default function Withdraw () {
   
     return (
         
-        <div style={{display: 'flex', flexDirection: 'column', padding: '10% 0% 40% 0%', backgroundColor: 'lightblue'}}>
+        <div style={{display: 'flex', flexDirection: 'column', padding: '10% 0% 100% 0%', backgroundColor: 'lightblue'}}>
 
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <img style={{width:'70px', height: '70px', borderRadius: '50%', border: 'solid 1px green'}} src={Pig_Withdraw} alt="Pig with Cash" /> 
