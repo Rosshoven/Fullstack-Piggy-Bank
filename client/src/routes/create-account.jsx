@@ -93,7 +93,6 @@ function BasicForm() {
 
                         <label htmlFor="userName">Username</label>
                         <input
-                            style={{ marginBottom: '7%' }}
                             id="userName"
                             type="text"
                             placeholder="Enter Username"
@@ -105,7 +104,6 @@ function BasicForm() {
 
                         <label htmlFor="email">Email</label>
                         <input
-                            style={{ marginBottom: '7%' }}
                             id="email"
                             type="email"
                             placeholder="Enter email"
@@ -117,7 +115,6 @@ function BasicForm() {
 
                         <label htmlFor="password">Password</label>
                         <input
-                            style={{ marginBottom: '7%' }}
                             id="password"
                             type="password"
                             placeholder="Enter password"
@@ -129,7 +126,6 @@ function BasicForm() {
 
                         <label htmlFor="confirmPassword">Confirm Password</label>
                         <input
-                            style={{ marginBottom: '7%' }}
                             id="confirmPassword"
                             type="password"
                             placeholder="Confirm password"

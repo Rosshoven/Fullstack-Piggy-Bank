@@ -66,9 +66,13 @@ width: 18rem;
 margin: 10% auto;
 background-color: #a6a6a6;  
 border: 2px solid green;
-
+/* height: 90%; */
 }
 
+
+#userName, #email, #password, #confirmPassword {
+  margin-bottom: 5%;
+}
  /* MEDIA QUERIES */
  @media only screen and (max-width: 1277px) {
   #home {
