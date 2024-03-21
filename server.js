@@ -9,7 +9,7 @@ var dal = require('./dal.js')
 const express = require('express');
 const app = express();
 // var cors = require('cors');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3003;
 const path = require('path');
 
 // MongoDB Compass connectionstring  from Anthony office hour
