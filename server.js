@@ -25,7 +25,7 @@ const path = require('path');
 
 
 // Serving the static files from my CRA -- 3/20/24 Added 'index.html' to see if that would help deployment on Render, didn't work
-app.use(express.static(path.join(__dirname, 'client/build' )));
+app.use(express.static(path.join(__dirname, 'client/build/index.html' )));
 // Home Static files
 
 // app.use(cors());
@@ -60,7 +60,7 @@ app.post('')
 
 // catch all-handle all requests if no one else handled it.
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
 
 // connecting port 
